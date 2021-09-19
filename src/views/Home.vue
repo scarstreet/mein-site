@@ -1,20 +1,44 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <h1>I made this web OwO)...</h1>
-    <p>I hab my own domain OwO).........</p>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <!-- TODO = Buttons to navigate travel :DD -->
+    <v-container fluid class="ma-0 pa-0">
+      <v-col justify-center>
+        <Welcome class="welcome"/>
+        <v-divider></v-divider>
+        <AboutMe/>
+        <v-divider></v-divider>
+          <p v-for="i in 100" :key="i" @click="showScroll()">another hello</p>
+      </v-col>
+    </v-container>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Vue from 'vue';
 
-export default {
+import Welcome from '@/components/Home/Welcome';
+import AboutMe from '@/components/Home/AboutMe';
+
+export default Vue.extend({
   name: 'Home',
   components: {
-    // HelloWorld
-  }
-}
+    Welcome,
+    AboutMe,
+  },
+  data: () => ({
+  }),
+  computed: {
+  },
+  created() {
+  },
+  methods: {
+  },
+});
 </script>
+
+<style scoped>
+.welcome {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+</style>
