@@ -1,20 +1,20 @@
 <template>
   <div class="welcome">
     <div v-if="$vuetify.breakpoint.smAndDown" class="ma-5">
-          <h1 align="center" class="display-2">{{welcome.title}}</h1>
-          <br/>
+      <h1 align="center" class="display-2">{{welcome.title}}</h1>
+      <br/>
+      <p align="center" class="subtitle-1">{{welcome.text}}</p>
+    </div>
+    <div v-else>
+      <v-row justify-center align="center" class="ma-5">
+        <v-col>
+          <h1 align="left" class="display-2">{{welcome.title}}</h1>
+        </v-col>
+        <v-col>
           <p class="subtitle-1">{{welcome.text}}</p>
-        </div>
-        <div v-else>
-          <v-row justify-center align="center" class="ma-5">
-            <v-col>
-              <h1 align="left" class="display-2">{{welcome.title}}</h1>
-            </v-col>
-            <v-col>
-              <p class="subtitle-1">{{welcome.text}}</p>
-            </v-col>
-          </v-row>
-        </div>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
 
@@ -33,5 +33,4 @@ export default Vue.extend({
 </script>
 
 <style>
-
 </style>

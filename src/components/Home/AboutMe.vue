@@ -2,8 +2,9 @@
   <div class="about-me">
     <v-col align="center">
       <div v-if="$vuetify.breakpoint.smAndDown">
+        <!-- SMOL VERSION -->
         <v-avatar size="200" class="avatarSm">
-          <v-img :src="imageSrc" contain>
+          <v-img :src="imageSrc">
           </v-img>
         </v-avatar>
         <h1 align="center" class="display-1">{{info.title}}</h1>
@@ -11,7 +12,8 @@
         <p align="center" class="subtitle-1">{{info.text}}</p>
       </div>
       <div v-else>
-        <v-row justify-center align="center">
+        <!-- BIGG VERSION -->
+        <v-row justify-center align="center" class="ml-2">
           <v-col class="col-md-7">
             <h1 align="left" class="display-1">{{info.title}}</h1>
             <p align="left" class="overline">{{info.other}}</p>
@@ -19,7 +21,7 @@
           </v-col>
           <v-col class="col-md-5">
             <v-avatar size="300" class="avatarMd">
-              <v-img :src="imageSrc" contain>
+              <v-img :src="imageSrc">
               </v-img>
             </v-avatar>
           </v-col>
@@ -35,7 +37,7 @@ import Vue from 'vue';
 export default Vue.extend({
   name: 'AboutMe',
   data: () => ({
-    imageSrc: 'https://i.ibb.co/DfBpCDR/rsz-186250756-2931159863787948-4444674507056701581-n.jpg',
+    imageSrc: 'https://i.ibb.co/9VV8byy/186250756-2931159863787948-4444674507056701581-n.jpg',
     info: {
       title: 'AboutMe',
       other: '20 y.o. | INTP | Dead Inside',
@@ -55,6 +57,6 @@ export default Vue.extend({
 }
 .overline {
   font-weight: lighter;
-  color: gainsboro;
+  color: rgb(184, 184, 184);
 }
 </style>
