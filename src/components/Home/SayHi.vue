@@ -13,13 +13,13 @@
         >
           <v-icon large>mdi-hand-wave-outline</v-icon>
         </v-btn>
-        <h1 class="display-1 my-2">{{title}}</h1>
+        <h1 class="display-1 ma-2">{{title}}</h1>
         <p class="caption mx-custom">{{text}}</p>
       </v-col>
     </div>
     <div v-else>
-      <v-row class="ma-5" align="center">
-        <v-col class="col-8">
+      <v-row class="ma-5">
+        <v-col class="col-8" align="left">
           <h1 class="display-2 my-3">{{title}}</h1>
           <p class="caption">{{text}}</p>
         </v-col>
@@ -62,7 +62,7 @@ export default Vue.extend({
 
 <style scoped>
 .mx-custom {
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 </style>

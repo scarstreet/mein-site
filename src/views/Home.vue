@@ -2,13 +2,13 @@
   <div class="home">
     <!-- TODO = Buttons to navigate travel :DD -->
     <v-container fluid class="ma-0 pa-0">
-      <v-col justify-center>
+      <v-col align="center">
         <!-- <v-sheet :height="filler" width="100" class="filler"></v-sheet> -->
         <Welcome class="bordr"/>
         <v-divider></v-divider>
         <AboutMe/>
         <v-divider></v-divider>
-        <p v-for="i in 5" :key="i" @click="showScroll()">another hello</p>
+        <v-sheet v-for="i in 5" :key="i" height="100"></v-sheet>
         <v-divider></v-divider>
         <p>TODO - Features</p>
         <v-divider></v-divider>

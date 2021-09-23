@@ -1,18 +1,35 @@
 <template>
-  <div class="contact-me" align-center justify-center>
+  <div class="contact-me">
     <h1 align="center">Contact Me</h1>
     <p align="center"> no, please don't </p>
     <v-sheet height="20"></v-sheet>
-    <v-row fluid>
-      <v-col fluid v-for="(item) in contact" :key="item.icon">
-        <v-row justify="center">
+    <v-row fluid align="center" justify="center">
+      <div v-if="$vuetify.breakpoint.smAndDown">
+        <v-col align="center" >
+          <v-row
+            fluid
+            v-for="(item) in contact"
+            :key="item.icon" align="center"
+            justify="center"
+          >
+            <a :href="item.ref">
+              <v-icon color="primary">{{item.icon}}</v-icon>
+              <u>{{item.link}}</u>
+            </a>
+            <!-- <b v-if="index !== contact.length-1"> | </b> -->
+          </v-row>
+        </v-col>
+      </div>
+      <v-row v-else>
+        <v-col class="col-1"></v-col>
+        <v-col fluid v-for="(item) in contact" :key="item.icon">
           <a :href="item.ref">
             <v-icon color="primary">{{item.icon}}</v-icon>
-            {{item.link}}
+            <u>{{item.link}}</u>
           </a>
-          <!-- <b v-if="index !== contact.length-1"> | </b> -->
-        </v-row>
-      </v-col>
+        </v-col>
+        <v-col class="col-1"></v-col>
+      </v-row>
     </v-row>
   </div>
 </template>
