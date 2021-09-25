@@ -55,7 +55,7 @@ import db from '@/firebase';
 export default Vue.extend({
   name: 'SayHi',
   data: () => ({
-    title: 'Say Hi????',
+    title: 'Say Hi?',
     text: "Yes! Please don't contact me. I'm really shy and I don't want to deal with feeling bad. Therefore, press the hand waving button to let me know you said hi! (Also, I'm testing out a feature, heheh. Thank you for reaching the end of this page though, I really appreciate it ^^).",
     hiLoad: false,
     hiPressed: false,
