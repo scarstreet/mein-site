@@ -37,13 +37,14 @@
       elevate-on-scroll
       fixed
       height="300"
-      src="https://wallpaperaccess.com/full/1251841.jpg"
+      src="https://i.ibb.co/R6pYgxf/1632985580822.jpg"
       dark
     >
+    <!-- to top right, rgba(255,81,28,.5), rgba(255,134,28,.5)"  -->
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(255,0,0,.2), rgba(0,0,72,.5)"
+          gradient="to top right, rgba(143,44,14,.8), rgba(255,134,28,.4)"
           scroll-target="#app"
         ></v-img>
       </template>
@@ -72,8 +73,26 @@ export default Vue.extend({
   },
   data: () => ({
     routes: [
-      { title: 'Home', icon: 'mdi-home-outline', path: '/' },
-      { title: 'Music Sheet', icon: 'mdi-music-clef-treble', path: '/music-sheets' },
+      {
+        title: '',
+        icon: '',
+        path: '',
+        banner: {
+          gradient: '',
+          title: '',
+          image: '',
+        },
+      },
+      {
+        title: 'Home',
+        icon: 'mdi-home-outline',
+        path: '/',
+      },
+      {
+        title: 'Music Sheet',
+        icon: 'mdi-music-clef-treble',
+        path: '/music-sheets',
+      },
     ],
     navBarOpened: false,
   }),
